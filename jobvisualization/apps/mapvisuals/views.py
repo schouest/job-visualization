@@ -62,10 +62,10 @@ def statedata(request):
 	GeoJson = json.dumps(AllStates)
 	return HttpResponse(GeoJson , content_type='application/json')
 
-def jensload(request):
+def mapload(request):
 	return render(request, 'mapvisuals/index.html')
 
-def jens(request):
+def cityload(request):
 	cities = WriteOnly.objects.filter(job_title ="Front End")[:10]
 
 	cityList = list()
